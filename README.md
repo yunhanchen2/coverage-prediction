@@ -63,10 +63,14 @@ and $r(l, S) = 0$ otherwise.
 1. **Get Optimal Solution and Coverage Rate(`get_max.py`)**
 
    - **Description:**  
-     This code is to find k sushi id to serve customers and max their utility. Here we use the brute-force algorithm. However, if the sushi types are too many, greedy algorithm is a better way. The input should be files name of ranking, and the output would be the optimal solution and the coverage rate.
+     This code selects *k* sushi items to serve customers in order to maximize overall utility.  It uses a **brute-force algorithm** to search all possible combinations. However, when the number of sushi types is large, a **greedy algorithm** is a more efficient way.  
+
+     **Input:** a filename containing sushi ranking data  
+     **Output:** the optimal solution (*k* sushi IDs) and the corresponding coverage rate
+
 
    - **Running Instruction:**
-       Run the script using:
+     Run the script using:
      ```
      python3 get_max.py
      ```
@@ -87,4 +91,7 @@ and $r(l, S) = 0$ otherwise.
      ```
      How many total sushi types are there? (e.g., 100):
      ```
-     
+2. **Get the Coverage Rate Over Primary Data(`gpt_persona_0_shot.py`)**
+   
+   - **Description:**
+     This code is for 
