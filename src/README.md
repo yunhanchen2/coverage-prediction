@@ -23,7 +23,7 @@
      ```
      You can input a number like `50`, `100`, `500`, `1000`, etc.
 
-1. **0 shot LLM Generation (`gpt_persona_0_shot.py`)**
+2. **0 shot LLM Generation (`gpt_persona_0_shot.py`)**
 
    - **Description:**
      This script is 0 shot LLM Generation. The basic idea is each time when LLM generates a line of ranking, it will first receive a random persona of examers and then receive prompts which include the sushi features and task discription. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings. To encourage GPT to be more exploratory when generating data, we shuffle the sushi feature list before each generation and set the temperature to 1.05.
@@ -43,6 +43,25 @@
      After executing, the terminal will prompt:
      ```
      How many data to generate?
+     ```
+     You can input a number like `50`, `100`, `500`, `1000`, etc.
+
+3. **Random Primary Data Generation (`random_prim.py`)**
+
+   - **Description:**  
+     This code randomly selects a specified number of sushi rankings from primary datas.
+
+     **Input:** the number of sushi rankings to select  
+     **Output:** file called `random_prim.txt` containing rankings, located in the same directory as `random_prim.py`
+
+   - **Running Instruction:**  
+     Run the script using:
+     ```
+     python3 random_prim.py
+     ```
+     After executing, the terminal will prompt:
+     ```
+     How many lines do you want to randomly pick?
      ```
      You can input a number like `50`, `100`, `500`, `1000`, etc.
 
