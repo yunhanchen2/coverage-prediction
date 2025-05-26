@@ -1,11 +1,21 @@
 # coverage-prediction
 
 ## Problem Description
-We are given n sushi items: $[n] = {0, 1, 2, ..., n−1}$   
-Each user has a preference list: $l = (l₁, ..., lₘ)$, where $lᵢ ∈ [n] $, and there will be $p$ items in $lᵢ$.   
-Our goal is to select a subset $S ⊆ [n]$, with $|S| ≤ k$, to maximize the following objective:    
-Expected coverage over users: $$max_{S ⊆ [n], |S| ≤ k}  E_{l} [ r(l, S) ]$$ , where $r(l, S) = 1$ if ${l₁, ..., lₘ} ∩ S ≠ ∅  
-        = 0$ otherwise
+
+We are given $n$ sushi items: $\[n] = \{0, 1, 2, \dots, n - 1\}$  
+Each user has a preference list: $l = (l_1, ..., l_m)$, where $l_i \in [n]$, and there will be $p$ items in each $l$.  
+Our goal is to select a subset $S \subseteq [n]$, with $|S| \leq k$, to maximize the following objective:  
+
+**Expected coverage over users:**
+
+$$
+\max_{S \subseteq [n],\ |S| \leq k} \ \mathbb{E}_{l} [ r(l, S) ]
+$$
+
+where  
+$r(l, S) = 1$ if $\{l_1, ..., l_m\} \cap S \neq \emptyset$,  
+and $r(l, S) = 0$ otherwise.
+
 
 
 
