@@ -3,7 +3,7 @@
 ## Problem Description
 
 We are given $n$ sushi items: $\[n] = \{0, 1, 2, \dots, n - 1\}$  
-Each user has a preference list: $l = (l_1, ..., l_m)$, where $l_i \in [n]$, and there will be $p$ items in each $l$.  
+Each user has a preference list: $l = (l_1, ..., l_m)$, where $l_i \in [n]$, and there will be $m$ items in each $l$.  
 Our goal is to select a subset $S \subseteq [n]$, with $|S| \leq k$, to maximize the following objective:  
 
 **Expected coverage over users:**
