@@ -63,7 +63,9 @@ and $r(l, S) = 0$ otherwise.
 1. **Get Optimal Solution and Coverage Rate(`get_max.py`)**
 
    - **Description:**  
-     This code is to find k sushi id to serve customers and max their utility. Here we use the brute-force algorithm. However, if the sushi types are too many, greedy algorithm is a better way.
+     This code is to find k sushi id to serve customers and max their utility. Here we use the brute-force algorithm. However, if the sushi types are too many, greedy algorithm is a better way. The input should be files name of ranking, and the output would be the optimal solution and the coverage rate.
+
+   - **Running Instruction:**
 
 
 
