@@ -20,7 +20,7 @@ and $r(l, S) = 0$ otherwise.
 
 ## Code Files Description
 
-### 📦 Data Generation
+### Data Generation
 
 1. **Random Data Generation (`random_ranking.py`)**
 
