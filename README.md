@@ -70,4 +70,21 @@ and $r(l, S) = 0$ otherwise.
      ```
      python3 get_max.py
      ```
-
+     After executing, the terminal will prompt:
+     ```
+     Please input the filename:
+     ```
+     You can type the txt file name.   
+     To set p, the terminal will prompt:
+     ```
+     How many top preferred categories will be picked? (e.g., 3):
+     ```
+     To set k, the terminal will prompt:
+     ```
+     How many sushi do you want to pick to serve customers? (e.g., 5):
+     ```
+     To get how many types of sushi will be ranked, the terminal will prompt:
+     ```
+     How many total sushi types are there? (e.g., 100):
+     ```
+     
