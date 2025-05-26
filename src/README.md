@@ -67,7 +67,7 @@
      Please input the filename:
      ```
      You can type the txt file name.   
-     To set p, the terminal will prompt:
+     To set m, the terminal will prompt:
      ```
      How many top preferred categories will be picked? (e.g., 3):
      ```
@@ -92,7 +92,7 @@
      ```
      python3 cal_bias.py
      ```
-     To get value of p, the terminal will prompt:
+     To get value of m, the terminal will prompt:
      ```
      How many top-ranked items per user should be considered? (e.g., 3): 
      ```
