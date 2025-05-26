@@ -41,7 +41,7 @@ and $r(l, S) = 0$ otherwise.
 2. **0 shot LLM Generation (`gpt_persona_0_shot.py`)**
 
    - **Description:**
-      This script is 0 shot LLM Generation. The basic idea is each time when LLM generates a line of ranking, it will first receive a random persona of examers and then receive prompts which include the sushi features and task discription. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings, and the result will be stored in a file called `sushi_ranking.txt` located in the same directory as `random_ranking.py`.
+     This script is 0 shot LLM Generation. The basic idea is each time when LLM generates a line of ranking, it will first receive a random persona of examers and then receive prompts which include the sushi features and task discription. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings, and the result will be stored in a file called `sushi_ranking.txt` located in the same directory as `random_ranking.py`.
 
    - **Running Instruction:**
       First get your OpenAI api:
@@ -60,9 +60,10 @@ and $r(l, S) = 0$ otherwise.
 
 ### Bias Checking
 
+1. **Get Optimal Solution and Coverage Rate(`get_max.py`)**
 
-
-
+   - **Description:**  
+     This code is to find k sushi id to serve customers and max their utility. Here we use the brute-force algorithm. However, if the sushi types are too many, greedy algorithm is a better way.
 
 
 
