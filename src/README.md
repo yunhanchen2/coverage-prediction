@@ -47,13 +47,12 @@
      toro (ID 7) is a non-maki type from the akami (red meat fish) group, belonging to the seafood category. It is very heavy in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 4.49.
      tekka_maki (ID 8) is a maki roll from the akami (red meat fish) group, belonging to the seafood category. It is moderate in taste, often eaten, occasionally found in sushi restaurants, and has a price score of 1.58.
      kappa_maki (ID 9) is a maki roll from the vegetable group, belonging to the non-seafood category. It is very light in taste, sometimes eaten, occasionally found in sushi restaurants, and has a price score of 1.02.
-     ```
 
      Please simulate a sushi ranking this person would produce.
      Please avoid always ranking the same item first across people.
      Return **exactly 10 unique integers from 0 to 9**, in order of preference, like:
      3 1 7 2 5 0 8 9 4 6
-
+     ```
 
    - **Running Instruction:**
       First get your OpenAI api:
