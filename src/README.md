@@ -50,7 +50,7 @@
 
      Please simulate a sushi ranking this person would produce.
      Please avoid always ranking the same item first across people.
-     Return **exactly 10 unique integers from 0 to 9**, in order of preference, like:
+     Return exactly 10 unique integers from 0 to 9, in order of preference, like:
      3 1 7 2 5 0 8 9 4 6
      ```
 
