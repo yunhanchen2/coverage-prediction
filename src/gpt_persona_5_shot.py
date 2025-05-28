@@ -127,6 +127,20 @@ def build_prompt(user_row, sushi_rows):
     sushi_info = "\n".join([sushi_to_text(s) for s in sushi_rows])
     
     prompt = f"""
+First, here is the background:
+Generally speaking, the eastern Japanese prefers more oily and more heavily seasoned food than the western Japanese.
+The western prefers to UDON noodle, while the eastern loves SOBA noodle.
+The way of cooking Kabayaki, grilled eels, is clearly different.
+
+The other preference patterns depending on regions are:
+- The SUSHI in Tokyo is specially called Edomaezushi. The typical examples of the Edomae are: anago (ID:1), zuke (ID:76), and kohada (ID:23).
+- A nattou (fermented bean) is loved in the Ibaraki prefecture, but is hated in the Kinki region.
+- An oceanic bonito is frequently eaten in the Kochi prefecture.
+- A mentaiko (chili cod roe) is a noted product in the Fukuoka prefecture.
+- A karasumi (dried mullet roe) is a noted product in the Nagasaki prefecture.
+- A batttera sushi is mainly eaten in the Kinki region.
+
+
 We already know some of the rankings correspond to personas:
 User 8295 is a female aged 20–29. They have spent most of their life in Aichi (Chukyo, Eastern Japan). Ranks the sushi as: 5 2 7 8 0 3 6 9 4 1
 User 5585 is a male aged 30–39. They have spent most of their life in Shizuoka (Kanto and Shizuoka, Eastern Japan). Ranks the sushi as: 7 2 3 0 5 4 8 1 6 9
@@ -150,7 +164,7 @@ Return **exactly 10 unique integers from 0 to 9**, in order of preference, like:
 def get_gpt_ranking(prompt):
     response = client.chat.completions.create(
         model="gpt-4o",
-        temperature=1.05,
+        temperature=0.7,
         messages=[
             {"role": "system", "content": "You are a helpful assistant simulating sushi preferences."},
             {"role": "user", "content": prompt}
