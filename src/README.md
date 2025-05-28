@@ -141,6 +141,26 @@
      ```
      You can input a number like `50`, `100`, `500`, `1000`, etc.
 
+5. **Few Shot Prompts Generation Helper (`few_shot_prompts_generation.py`)**
+
+   - **Description:**  
+     This code generates a specific number of examples in prompts.
+
+     **Input:** the number of examples  
+     **Output:** file called `prompt_persona.txt`
+
+   - **Running Instruction:**  
+     Run the script using:
+     ```
+     python3 few_shot_prompts_generation.py
+     ```
+     After executing, the terminal will prompt:
+     ```
+     How many lines to sample?
+     ```
+     You can input a number like `5`, `7`, `10`, etc.
+
+
 ### Bias Checking
 
 1. **Get Optimal Solution and Coverage Rate(`get_max.py`)**
