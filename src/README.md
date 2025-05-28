@@ -61,7 +61,7 @@
      ```
       Run the script using:
      ```
-     python3 gpt_persona_0_shot.py
+     python3 gpt_persona_5_shot.py
      ```
      After executing, the terminal will prompt:
      ```
