@@ -69,7 +69,60 @@
      ```
      You can input a number like `50`, `100`, `500`, `1000`, etc.
 
-3. **Random Primary Data Generation (`random_prim.py`)**
+3. **5 shot LLM Generation (`gpt_persona_5_shot.py`)**
+
+   - **Description:**
+     This script is 5 shot LLM Generation, which is very similar to 0 shot but will show additional 5 examples of rankings corresponding to persona. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings. To encourage GPT to be more exploratory when generating data, we shuffle the sushi feature list before each generation and set the temperature to 1.05.
+
+     **Input:** the number of sushi rankings to generate  
+     **Output:** file called `sushi_ranking.txt` containing rankings, located in the same directory as `gpt_persona_0_shot.py`
+
+     An example of 0-shot prompt:
+     ```
+     We already know some of the rankings correspond to personas:
+     User 8295 is a female aged 20–29. They have spent most of their life in Aichi (Chukyo, Eastern Japan). Ranks the sushi as: 5 2 7 8 0 3 6 9 4 1
+     User 5585 is a male aged 30–39. They have spent most of their life in Shizuoka (Kanto and Shizuoka, Eastern Japan). Ranks the sushi as: 7 2 3 0 5 4 8 1 6 9
+     User 5091 is a male aged 20–29. They have spent most of their life in Mie (Chukyo, Eastern Japan). Ranks the sushi as: 5 0 7 2 3 6 8 9 1 4
+     User 1631 is a male aged 40–49. They have spent most of their life in Tokyo (Kanto and Shizuoka, Eastern Japan). Ranks the sushi as: 4 5 7 1 2 3 8 6 9 0
+     User 1978 is a female aged 30–39. They have spent most of their life in Osaka (Kinki, Western Japan). Ranks the sushi as: 0 3 6 5 2 9 1 8 7 4
+     
+     User profile:
+     User 1234 is a female aged 20–29. They have spent most of their life in Tokyo (Kanto and Shizuoka, Eastern Japan).
+
+     Sushi items:
+     ebi (ID 0) is a non-maki type from the shrimp or crab group, belonging to the seafood category. It is light in taste, very frequently eaten, very commonly found in sushi restaurants, and has a price score of 1.84.
+     anago (ID 1) is a non-maki type from the tare (eel sauce) group, belonging to the seafood category. It is heavy in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 1.99.
+     maguro (ID 2) is a non-maki type from the akami (red meat fish) group, belonging to the seafood category. It is moderate in taste, very frequently eaten, very commonly found in sushi restaurants, and has a price score of 1.87.
+     ika (ID 3) is a non-maki type from the squid or octopus group, belonging to the seafood category. It is light in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 1.52.
+     uni (ID 4) is a non-maki type from the other seafood group, belonging to the seafood category. It is heavy in taste, sometimes eaten, very commonly found in sushi restaurants, and has a price score of 3.29.
+     ikura (ID 5) is a non-maki type from the roe group, belonging to the seafood category. It is heavy in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 2.70.
+     tamago (ID 6) is a non-maki type from the egg group, belonging to the non-seafood category. It is moderate in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 1.03.
+     toro (ID 7) is a non-maki type from the akami (red meat fish) group, belonging to the seafood category. It is very heavy in taste, often eaten, very commonly found in sushi restaurants, and has a price score of 4.49.
+     tekka_maki (ID 8) is a maki roll from the akami (red meat fish) group, belonging to the seafood category. It is moderate in taste, often eaten, occasionally found in sushi restaurants, and has a price score of 1.58.
+     kappa_maki (ID 9) is a maki roll from the vegetable group, belonging to the non-seafood category. It is very light in taste, sometimes eaten, occasionally found in sushi restaurants, and has a price score of 1.02.
+
+     Please simulate a sushi ranking this person would produce.
+     Please avoid always ranking the same item first across people.
+     Return exactly 10 unique integers from 0 to 9, in order of preference, like:
+     3 1 7 2 5 0 8 9 4 6
+     ```
+
+   - **Running Instruction:**
+      First get your OpenAI api:
+     ```
+     export OPENAI_API_KEY=sk-xxxxx...  (your api)
+     ```
+      Run the script using:
+     ```
+     python3 gpt_persona_0_shot.py
+     ```
+     After executing, the terminal will prompt:
+     ```
+     How many data to generate?
+     ```
+     You can input a number like `50`, `100`, `500`, `1000`, etc.
+
+4. **Random Primary Data Generation (`random_prim.py`)**
 
    - **Description:**  
      This code randomly selects a specified number of sushi rankings from primary datas.
