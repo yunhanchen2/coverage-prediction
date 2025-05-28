@@ -72,7 +72,7 @@
 3. **5 shot LLM Generation (`gpt_persona_5_shot.py`)**
 
    - **Description:**
-     This script is 5 shot LLM Generation, which is very similar to 0 shot but will show additional 5 examples of rankings corresponding to persona. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings. To encourage GPT to be more exploratory when generating data, we shuffle the sushi feature list before each generation and set the temperature to 1.05.
+     This script is 5 shot LLM Generation, which is very similar to 0 shot but will show additional 5 examples of rankings corresponding to persona. Here we use the gpt-4o and generate `50`, `100`, `500`, `1000` numbers of rankings. To encourage GPT to be more exploratory when generating data, we shuffle the sushi feature list before each generation and set the temperature to 0.7.
 
      **Input:** the number of sushi rankings to generate  
      **Output:** file called `sushi_ranking.txt` containing rankings, located in the same directory as `gpt_persona_0_shot.py`
