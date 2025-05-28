@@ -215,3 +215,6 @@
      ```
      Enter the sushi IDs you want to serve (space-separated). Press Enter when done:
      ```
+### Bias Elimination
+
+1. 
